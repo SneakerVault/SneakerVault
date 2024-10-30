@@ -140,7 +140,7 @@ body {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Assistant', sans-serif;
     color: var(--dark-color);
     overflow-x: hidden;
 }
@@ -213,7 +213,6 @@ body {
         visibility: visible;
         margin-top: 0;
         box-shadow: none;
-        border-left: 2px solid var(--primary-color);
     }
 }
 
@@ -266,7 +265,7 @@ body {
         display: block;
         margin-top: 0;
         margin-left: 15px;
-        border-left: 1px solid #ccc;
+
     }
     
     .dropdown-submenu > a:after {
@@ -301,7 +300,6 @@ body {
         border-color: transparent;
         border-style: solid;
         border-width: 5px 0 5px 5px;
-        border-left-color: #cccccc;
         margin-top: 5px;
         margin-right: -10px;
     }
