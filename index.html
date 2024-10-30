@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakerVault - Your Ultimate Sneaker Destination</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <script src="javascript/homepage.js" defer></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SneakerVault</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Nike</a>
+                                <ul class="dropdown-menu submenu" aria-labelledby="nikeDropdown">
+                                    <li><h6 class="dropdown-header">Nike Air Jordan</h6></li>
+                                    <li><a class="dropdown-item" href="#">Air Jordan 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Air Jordan 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Air Jordan 3</a></li>
+                                    <li><a class="dropdown-item" href="#">Air Jordan 4</a></li>
+                                    <li><a class="dropdown-item" href="#">Air Jordan 5</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Air Max</a></li>
+                                    <li><a class="dropdown-item" href="#">Nike Dunk</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Adidas</a></li>
+                            <li><a class="dropdown-item" href="#">Puma</a></li>
+                            <li><a class="dropdown-item" href="#">Reebok</a></li>
+                            <li><a class="dropdown-item" href="#">New Balance</a></li>
+                            <li><a class="dropdown-item" href="#">Converse</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#featured">Featured</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#new-arrivals">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1556906781-9a412961c28c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                    <div class="carousel-caption">
+                        <h5 class="fade-in-up">Step into Style</h5>
+                        <p class="fade-in-up">Discover the latest trends in sneakers. From classic designs to cutting-edge styles, find your perfect pair today.</p>
+                        <a href="#featured" class="btn btn-primary btn-lg fade-in-up">Shop Now</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80')">
+                    <div class="carousel-caption">
+                        <h5 class="fade-in-up">New Arrivals</h5>
+                        <p class="fade-in-up">Be the first to grab our latest collections. Limited editions and exclusive designs await you.</p>
+                        <a href="#new-arrivals" class="btn btn-primary btn-lg fade-in-up">Explore New Arrivals</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1779&q=80')">
+                    <div class="carousel-caption">
+                        <h5 class="fade-in-up">Join the SneakerVault Community</h5>
+                        <p class="fade-in-up">Get exclusive access to limited releases, special offers, and sneaker news.</p>
+                        <a href="#newsletter" class="btn btn-primary btn-lg fade-in-up">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="featured" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Products</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card featured-product">
+                        <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="card-img-top product-img" alt="Featured Sneaker 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Air Max 90</h5>
+                            <p class="card-text">Classic style meets modern comfort.</p>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card featured-product">
+                        <img src="https://images.unsplash.com/photo-1605408499391-6368c628ef42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="card-img-top product-img" alt="Featured Sneaker 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Ultraboost 21</h5>
+                            <p class="card-text">Responsive boost cushioning for ultimate comfort.</p>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card featured-product">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80" class="card-img-top product-img" alt="Featured Sneaker 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Chuck Taylor All Star</h5>
+                            <p class="card-text">Timeless style for every occasion.</p>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="new-arrivals" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">New Arrivals</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card featured-product">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" class="card-img-top product-img" alt="New Arrival 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Air Jordan 1</h5>
+                            <p class="card-text">$180</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card featured-product">
+                        <img  src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1915&q=80" class="card-img-top product-img" alt="New Arrival 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Yeezy Boost 350</h5>
+                            <p class="card-text">$220</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card featured-product">
+                        <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80" class="card-img-top product-img" alt="New Arrival 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Nike Air Force 1</h5>
+                            <p class="card-text">$100</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card featured-product">
+                        <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1812&q=80" class="card-img-top product-img" alt="New Arrival 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Adidas NMD</h5>
+                            <p class="card-text">$130</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="mb-4">About SneakerVault</h2>
+                    <p>Welcome to SneakerVault, your one-stop destination for the latest and greatest in sneaker fashion. Founded in 2024, we've quickly become a go-to source for sneaker enthusiasts around the world.</p>
+                    <p>Our mission is simple: to provide our customers with the best selection of sneakers, outstanding customer service, and an unparalleled shopping experience. We're passionate about sneakers and it shows in everything we do.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="About SneakerVault" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="mb-4">Subscribe to Our Newsletter</h2>
+                    <p class="mb-4">Stay updated with the latest releases, exclusive deals, and sneaker news!</p>
+                    <form class="d-flex justify-content-center">
+                        <input type="email" class="form-control me-2" placeholder="Enter your email" aria-label="Email">
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Our Location</h4>
+                    <p>123 Sneaker Street, Footwear City, FC 12345</p>
+                    <h4>Email</h4>
+                    <p>sneakervaultmw@gmail.com</p>
+                    <h4>Phone</h4>
+                    <p>+265 882 364 203</p>
+                    <h4>Follow Us</h4>
+                    <div class="mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 SneakerVault. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
