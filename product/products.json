@@ -1,7 +1,7 @@
 [
     { "id": 1, "name": "Air Force 1 Low", "price": 133650, "image": "../images/airForce1/af1_1/af1_1.jpg", "category": "nike" },
     { "id": 2, "name": "Nike Air Max 95", "price": 133650, "image": "../images/airMax/airMax95_1/airMax95_1a.jpg", "category": "nike" },
-    { "id": 3, "name": "Nike SB Dunk Low", "price": 123650, "image": "../images/sbdunk/sbdunk1.jpg", "category": "nike" },
+    { "id": 3, "name": "Nike Air Jordan 1 Low", "price": 133650, "image": "../images/airJordan1/aj1_1/aj1_1a.jpg", "category": "nike" },
     { "id": 4, "name": "Nike Nocta Glide", "price": 133650, "image": "../images/nocta/nocta1.jpg", "category": "nike" },
     { "id": 5, "name": "Adidas Superstar", "price": 110000, "image": "https://via.placeholder.com/200x200?text=Adidas+Superstar", "category": "adidas" },
     { "id": 6, "name": "Puma Suede Classic", "price": 95000, "image": "https://via.placeholder.com/200x200?text=Puma+Suede", "category": "puma" },
