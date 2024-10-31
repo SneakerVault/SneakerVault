@@ -22,8 +22,25 @@
         "price": 133650,
         "description": "Experience supreme comfort and energy return with Nike Air Max 95.",
         "images": [
-            "../images/airMax/airMax95_1/airmax95_1a.jpg",
-            "../images/airMax/airMax95_1/airmax95_1b.jpg"
+            "../images/airMax/airMax95_1/airMax95_1a.jpg",
+            "../images/airMax/airMax95_1/airMax95_1b.jpg"
         ]
-    }
+    },
+    {
+        "id": 3,
+        "name": "Nike Air Jordan 1",
+        "price": "133650",
+        "description": "A comfy and suitable sneaker for the week.",
+        "images": [
+          "../images/airJordan1/aj1_1/aj1_1a.jpg",
+          "../images/airJordan1/aj1_1/aj1_1b.jpg",
+          "../images/airJordan1/aj1_1/aj1_1c.jpg",
+          "../images/airJordan1/aj1_1/aj1_1d.jpg",
+          "../images/airJordan1/aj1_1/aj1_1e.jpg",
+          "../images/airJordan1/aj1_1/aj1_1f.jpg",
+          "../images/airJordan1/aj1_1/aj1_1g.jpg",
+          "../images/airJordan1/aj1_1/aj1_1h.jpg",
+          "../images/airJordan1/aj1_1/aj1_1i.jpg"
+        ]
+      }
 ]

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Product Dashboard</h2>
+        <div class="d-flex mb-3">
+            <button class="btn btn-primary mr-2" onclick="showProductForm()">Add Product</button>
+            <button class="btn btn-secondary mr-2" onclick="document.getElementById('jsonUpload').click()">Load JSON File</button>
+            <button class="btn btn-success" onclick="saveJSON()">Save JSON</button>
+            <input type="file" id="jsonUpload" accept=".json" onchange="loadJSON(event)" style="display:none">
+        </div>
+
+        <!-- Product List -->
+        <div id="productList" class="row"></div>
+
+        <!-- Product Form Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Product Form</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="productForm">
+                            <input type="hidden" id="productId">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" id="productName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input type="number" id="productPrice" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea id="productDescription" class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Images (comma-separated URLs)</label>
+                                <input type="text" id="productImages" class="form-control" required>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="saveProduct()">Save Product</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Dashboard Script -->
+    <script>
+        let products = [];
+
+        // Load JSON from file
+        function loadJSON(event) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                products = JSON.parse(event.target.result);
+                displayProducts();
+            };
+            reader.readAsText(event.target.files[0]);
+        }
+
+        // Display Products
+        function displayProducts() {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = products.map(product => `
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text">Price: MWK ${product.price}</p>
+                            <p class="card-text">${product.description}</p>
+                            <p class="card-text">Images: ${product.images.join(", ")}</p>
+                            <button class="btn btn-warning" onclick="editProduct(${product.id})">Edit</button>
+                            <button class="btn btn-danger" onclick="deleteProduct(${product.id})">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        // Show Add/Edit Product Form
+        function showProductForm(product = {}) {
+            document.getElementById("productId").value = product.id || '';
+            document.getElementById("productName").value = product.name || '';
+            document.getElementById("productPrice").value = product.price || '';
+            document.getElementById("productDescription").value = product.description || '';
+            document.getElementById("productImages").value = product.images ? product.images.join(", ") : '';
+            $('#productModal').modal('show');
+        }
+
+        // Save Product
+        function saveProduct() {
+            const id = document.getElementById("productId").value;
+            const name = document.getElementById("productName").value;
+            const price = document.getElementById("productPrice").value;
+            const description = document.getElementById("productDescription").value;
+            const images = document.getElementById("productImages").value.split(',').map(img => img.trim());
+
+            if (id) {
+                const index = products.findIndex(p => p.id == id);
+                products[index] = { id: parseInt(id), name, price, description, images };
+            } else {
+                const newId = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1;
+                products.push({ id: newId, name, price, description, images });
+            }
+
+            displayProducts();
+            $('#productModal').modal('hide');
+        }
+
+        // Edit Product
+        function editProduct(id) {
+            const product = products.find(p => p.id === id);
+            showProductForm(product);
+        }
+
+        // Delete Product
+        function deleteProduct(id) {
+            products = products.filter(p => p.id !== id);
+            displayProducts();
+        }
+
+        // Save JSON File
+        function saveJSON() {
+            const jsonString = JSON.stringify(products, null, 2);
+            const blob = new Blob([jsonString], { type: "application/json" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "products.json";
+            link.click();
+        }
+    </script>
+</body>
+</html>
