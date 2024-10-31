@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakerVault - Product Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SneakerVault</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop-and-cart.html">Shop All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="cartIcon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cartCount" class="badge bg-primary">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://via.placeholder.com/500x500?text=Product+Image+1" class="d-block w-100" alt="Product Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/500x500?text=Product+Image+2" class="d-block w-100" alt="Product Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/500x500?text=Product+Image+3" class="d-block w-100" alt="Product Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/500x500?text=Product+Image+4" class="d-block w-100" alt="Product Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/500x500?text=Product+Image+5" class="d-block w-100" alt="Product Image 5">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 id="productName">Product Name</h1>
+                <p id="productPrice" class="h3 mb-4">MWK 0</p>
+                <p id="productDescription" class="mb-4">Product description goes here. This is a detailed description of the product, including its features and benefits.</p>
+                <div class="mb-4">
+                    <label for="sizeSelect" class="form-label">Size:</label>
+                    <select id="sizeSelect" class="form-select">
+                        <option value="">Select Size</option>
+                        <option value="7">US 7</option>
+                        <option value="8">US 8</option>
+                        <option value="9">US 9</option>
+                        <option value="10">US 10</option>
+                        <option value="11">US 11</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="quantityInput" class="form-label">Quantity:</label>
+                    <input type="number" id="quantityInput" class="form-control" value="1" min="1">
+                </div>
+                <button id="addToCartBtn" class="btn btn-primary btn-lg mb-4">Add to Cart</button>
+                <div id="productDetails">
+                    <h3>Product Details</h3>
+                    <ul>
+                        <li>Material: High-quality synthetic leather</li>
+                        <li>Sole: Rubber</li>
+                        <li>Closure: Lace-up</li>
+                        <li>Style: Athletic</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastContainer" class="position-fixed bottom-0 end-0 p-3" style="z-index: 11"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

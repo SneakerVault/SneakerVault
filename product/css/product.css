@@ -1,0 +1,65 @@
+body {
+    font-family: 'Assistant', sans-serif;
+    padding-top: 60px;
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+#productCarousel {
+    margin-bottom: 20px;
+}
+
+#productCarousel .carousel-item img {
+    object-fit: cover;
+    height: 500px;
+}
+
+#productName {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#productPrice {
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+#productDescription {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#productDetails h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#productDetails ul {
+    padding-left: 20px;
+}
+
+#productDetails li {
+    margin-bottom: 10px;
+}
+
+#addToCartBtn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+#addToCartBtn:hover {
+    background-color: #ff8f8f;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+    #productCarousel .carousel-item img {
+        height: 300px;
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Nike Air Max 95",
+        "price": 133650,
+        "description": "The Nike Air Max 95 brings you classic style with premium comfort.",
+        "images": [
+            "https://via.placeholder.com/500x500?text=Nike+Air+Max+95+1",
+            "https://via.placeholder.com/500x500?text=Nike+Air+Max+95+2"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Adidas Ultraboost",
+        "price": 150000,
+        "description": "Experience supreme comfort and energy return with Ultraboost.",
+        "images": [
+            "https://via.placeholder.com/500x500?text=Adidas+Ultraboost+1",
+            "https://via.placeholder.com/500x500?text=Adidas+Ultraboost+2"
+        ]
+    }
+]
