@@ -12,17 +12,17 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">SneakerVault</a>
+            <a class="navbar-brand" href="../index.html">SneakerVault</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop-and-cart.html">Shop All</a>
+                        <a class="nav-link" href="../shopAll/shopAll.html">Shop All</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="cartIcon">
@@ -67,18 +67,32 @@
                 </div>
             </div>
             <div class="col-md-6">
+
+                <h1 id="productName">Product Name</h1>
+                <p id="productPrice" class="h3 mb-4">MWK 0</p>
+                <p id="productDescription" class="mb-4">Product description goes here.</p>
+                <div id="productImages"></div>
+
+                <!--
                 <h1 id="productName">Product Name</h1>
                 <p id="productPrice" class="h3 mb-4">MWK 0</p>
                 <p id="productDescription" class="mb-4">Product description goes here. This is a detailed description of the product, including its features and benefits.</p>
+                -->
+                
                 <div class="mb-4">
                     <label for="sizeSelect" class="form-label">Size:</label>
                     <select id="sizeSelect" class="form-select">
                         <option value="">Select Size</option>
-                        <option value="7">US 7</option>
-                        <option value="8">US 8</option>
-                        <option value="9">US 9</option>
-                        <option value="10">US 10</option>
-                        <option value="11">US 11</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
                     </select>
                 </div>
                 <div class="mb-4">
@@ -103,5 +117,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/product.js"></script>
+
+    
+
 </body>
 </html>

@@ -18,16 +18,16 @@ function displayProducts(productsToShow) {
     productsToShow.forEach(product => {
         const productCard = `
             <div class="col-md-4 col-lg-3 mb-4">
-            <a href="../product/product.html?id=${product.id}" class="activeLink">
                 <div class="card product-card h-100">
+                <a href="../product/product.html?id=${product.id}" class="activeLink">
                     <img src="${product.image}" class="card-img-top product-image" alt="${product.name}">
+                </a>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">${product.name}</h5>
                         <p class="card-text">MWK ${product.price.toLocaleString()}</p>
                         <button class="btn btn-primary mt-auto add-to-cart" data-id="${product.id}">Add to Cart</button><br>
                     </div>
                 </div>
-            </a>
             </div>
         `;
         productList.innerHTML += productCard;

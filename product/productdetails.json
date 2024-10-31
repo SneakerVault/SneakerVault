@@ -1,22 +1,29 @@
 [
     {
         "id": 1,
-        "name": "Nike Air Max 95",
+        "name": "Nike Air Force 1",
         "price": 133650,
-        "description": "The Nike Air Max 95 brings you classic style with premium comfort.",
+        "description": "The Nike Air Force 1 brings you classic style with premium comfort.",
         "images": [
-            "https://via.placeholder.com/500x500?text=Nike+Air+Max+95+1",
-            "https://via.placeholder.com/500x500?text=Nike+Air+Max+95+2"
+            "../images/airForce1/af1_1/af1_1.jpg",
+            "../images/airForce1/af1_1/af1_2.jpg",
+            "../images/airForce1/af1_1/af1_3.jpg",
+            "../images/airForce1/af1_1/af1_4.jpg",
+            "../images/airForce1/af1_1/af1_5.jpg",
+            "../images/airForce1/af1_1/af1_6.jpg",
+            "../images/airForce1/af1_1/af1_7.jpg",
+            "../images/airForce1/af1_1/af1_8.jpg",
+            "../images/airForce1/af1_1/af1_9.jpg"
         ]
     },
     {
         "id": 2,
-        "name": "Adidas Ultraboost",
-        "price": 150000,
-        "description": "Experience supreme comfort and energy return with Ultraboost.",
+        "name": "Nike Air Max 95",
+        "price": 133650,
+        "description": "Experience supreme comfort and energy return with Nike Air Max 95.",
         "images": [
-            "https://via.placeholder.com/500x500?text=Adidas+Ultraboost+1",
-            "https://via.placeholder.com/500x500?text=Adidas+Ultraboost+2"
+            "../images/airMax/airMax95_1/airmax95_1a.jpg",
+            "../images/airMax/airMax95_1/airmax95_1b.jpg"
         ]
     }
 ]

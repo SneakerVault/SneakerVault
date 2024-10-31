@@ -60,6 +60,6 @@ body {
 
 @media (max-width: 767px) {
     #productCarousel .carousel-item img {
-        height: 300px;
+        height: 100%;
     }
 }

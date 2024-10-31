@@ -3,40 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = parseInt(urlParams.get('id'), 10);
 
-    // Fetch product data from JSON file
-    fetch('../productdetails.json') // Replace with the correct path
-        .then(response => response.json())
-        .then(products => {
-            const product = products.find(p => p.id === productId);
-
-            if (product) {
-                // Populate product details
-                document.getElementById('productName').textContent = product.name;
-                document.getElementById('productPrice').textContent = `MWK ${product.price.toLocaleString()}`;
-                document.getElementById('productDescription').textContent = product.description;
-
-                // Populate carousel images
-                const carouselInner = document.querySelector('#productCarousel .carousel-inner');
-                carouselInner.innerHTML = ''; // Clear existing items
-                product.images.forEach((image, index) => {
-                    const carouselItem = document.createElement('div');
-                    carouselItem.className = `carousel-item${index === 0 ? ' active' : ''}`;
-                    carouselItem.innerHTML = `<img src="${image}" class="d-block w-100" alt="${product.name} Image ${index + 1}">`;
-                    carouselInner.appendChild(carouselItem);
-                });
-            } else {
-                // Handle case when product is not found
-                document.getElementById('productName').textContent = 'Product Not Found';
-                document.getElementById('productPrice').textContent = '';
-                document.getElementById('productDescription').textContent = '';
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching product data:', error);
-            // Handle fetch error (optional)
-            document.getElementById('productName').textContent = 'Error loading product data';
-        });
-
     // Add to cart functionality (same as before)
     const addToCartBtn = document.getElementById('addToCartBtn');
     const sizeSelect = document.getElementById('sizeSelect');
@@ -97,3 +63,51 @@ function showToast(message, type = 'info') {
         toast.remove();
     });
 }
+
+    //Static Retriving Code
+    // Function to get the ID parameter from the URL
+    function getProductIdFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return parseInt(urlParams.get('id'));
+    }
+
+    // Fetch and display the product details based on ID
+    async function loadProductDetails() {
+        const productId = getProductIdFromURL();
+        try {
+            const response = await fetch('productdetails.json'); // Update with the correct path to products.json
+            const products = await response.json();
+
+            // Find the product with matching ID
+            const product = products.find(p => p.id === productId);
+
+            if (product) {
+                // Display product details
+                document.getElementById('productName').textContent = product.name;
+                document.getElementById('productPrice').textContent = `MWK ${product.price.toLocaleString()}`;
+                document.getElementById('productDescription').textContent = product.description;
+
+                // Populate carousel images
+                const carouselInner = document.querySelector('.carousel-inner');
+                carouselInner.innerHTML = ''; // Clear existing items
+
+                product.images.forEach((imageUrl, index) => {
+                    const carouselItem = document.createElement('div');
+                    carouselItem.className = `carousel-item${index === 0 ? ' active' : ''}`;
+                    carouselItem.innerHTML = `<img src="${imageUrl}" class="d-block w-100" alt="${product.name} Image ${index + 1}">`;
+                    carouselInner.appendChild(carouselItem);
+                });
+            } else {
+                // If no product is found with that ID
+                document.getElementById('productName').textContent = 'Product Not Found';
+                document.getElementById('productPrice').textContent = '';
+                document.getElementById('productDescription').textContent = '';
+            }
+        } catch (error) {
+            console.error('Error fetching product data:', error);
+            document.getElementById('productName').textContent = 'Error loading product data';
+        }
+    }
+
+    // Run the function to load product details when the page loads
+    loadProductDetails();
