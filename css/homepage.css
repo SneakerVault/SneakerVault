@@ -125,10 +125,13 @@ body {
     }
     .carousel-caption h5 {
         font-size: 17px;
+        font-weight: 600;
+        margin-top: -250px;
     }
     .carousel-caption p {
         font-size: 13px;
         line-height: 1.6;
+        margin-bottom: 20px;
     }
 }
 
@@ -324,4 +327,44 @@ body {
         .dropdown-submenu.show > .dropdown-menu {
             display: block;
         }
+    }
+
+
+    body {
+        font-family: 'Assistant', sans-serif;
+        padding-top: 60px;
+    }
+    
+    .navbar {
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    }
+    
+    .product-card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .product-image {
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #cartIcon {
+        position: relative;
+    }
+    
+    #cartCount {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        font-size: 0.7em;
+    }
+    
+    .activeLink{
+        text-decoration: none;
     }

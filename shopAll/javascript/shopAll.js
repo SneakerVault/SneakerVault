@@ -3,7 +3,7 @@ let cart = [];
 
 async function loadProducts() {
     try {
-        const response = await fetch('../product/products.json');
+        const response = await fetch('../product/productdetails.json');
         products = await response.json();
         displayProducts(products);
     } catch (error) {
@@ -19,9 +19,9 @@ function displayProducts(productsToShow) {
         const productCard = `
             <div class="col-md-4 col-lg-3 mb-4">
                 <div class="card product-card h-100">
-                <a href="../product/product.html?id=${product.id}" class="activeLink">
-                    <img src="${product.image}" class="card-img-top product-image" alt="${product.name}">
-                </a>
+                    <a href="../product/product.html?id=${product.id}" class="activeLink">
+                        <img src="${product.images[0]}" class="card-img-top product-image" alt="${product.name}">
+                    </a>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">${product.name}</h5>
                         <p class="card-text">MWK ${product.price.toLocaleString()}</p>
